@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react'
-import classNames from 'classnames';
 import CSSModules from 'react-css-modules'
 import styles from './Promo.scss'
 import Socials from '../Socials/Socials'
