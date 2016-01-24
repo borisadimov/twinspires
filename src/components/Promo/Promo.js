@@ -9,17 +9,21 @@ import CopyToClipboard from 'react-copy-to-clipboard'
 export class Promo extends React.Component {
 
   static propTypes = {
-    promoActive: PropTypes.bool
+    promoActive: PropTypes.bool,
+    value: PropTypes.string,
+    copied: PropTypes.bool
   };
 
   static defaultProps = {
-    promoActive: false
+    promoActive: false,
+    value: 'https://www.twinspires.com/account/register?promo_code=CAMID',
+    copied: false
   };
 
   state = {
     promoActive: this.props.promoActive,
-    value: 'https://www.twinspires.com/account/register?promo_code=CAMID',
-    copied: false
+    value: this.props.value,
+    copied: this.props.copied
   };
 
   render () {
@@ -48,7 +52,7 @@ export class Promo extends React.Component {
             CAMID
           </div>
 
-          <div onClick={this._onClick} styleName='link'>
+          <div onClick={this._onLinkClick} styleName='link'>
             Get Your Invitation Link
           </div>
         </div>
@@ -69,7 +73,7 @@ export class Promo extends React.Component {
             </CopyToClipboard>
           </div>
 
-          <div onClick={this._onClick} styleName='link'>
+          <div onClick={this._onLinkClick} styleName='link'>
             Show your Promo Code
           </div>
         </div>
@@ -84,7 +88,7 @@ export class Promo extends React.Component {
     })
   };
 
-  _onClick = (event) => {
+  _onLinkClick = (event) => {
     this.setState({promoActive: !this.state.promoActive})
   };
 
