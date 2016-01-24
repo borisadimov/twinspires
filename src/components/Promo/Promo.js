@@ -11,19 +11,17 @@ export class Promo extends React.Component {
   static propTypes = {
     promoActive: PropTypes.bool,
     value: PropTypes.string,
-    copied: PropTypes.bool
   };
 
   static defaultProps = {
     promoActive: false,
     value: 'https://www.twinspires.com/account/register?promo_code=CAMID',
-    copied: false
   };
 
   state = {
     promoActive: this.props.promoActive,
     value: this.props.value,
-    copied: this.props.copied
+    copied: false
   };
 
   render () {
