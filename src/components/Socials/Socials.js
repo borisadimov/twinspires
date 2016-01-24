@@ -13,11 +13,11 @@ export class Socials extends React.Component {
           share via email
         </div>
         <div styleName='social-facebook'>
-          <a href='#'></a>
+          <a href='https://www.facebook.com/Twinspires'></a>
           share on facebook
         </div>
         <div styleName='social-twitter'>
-          <a href='#'></a>
+          <a href='https://twitter.com/twinspires'></a>
           share on twitter
         </div>
       </div>
