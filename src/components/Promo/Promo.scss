@@ -1,5 +1,4 @@
-.promo,
-.promo-two {
+.promo {
   background: #c7e2f5;
   border-radius: 10px;
   max-width: 670px;
@@ -61,8 +60,19 @@
   padding: 6px 0;
   user-select: none;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 
-.promo-two .link {
-  margin-top: 10px;
+.promoItemTwo,
+.promoItem.--active {
+  display: none;
+}
+
+.promoItemTwo.--active {
+  display: block;
+}
+
+.promoItemTwo .link {
+  margin-top: 21px;
 }

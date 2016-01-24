@@ -1,9 +1,11 @@
 import React, { PropTypes } from 'react'
 import CSSModules from 'react-css-modules'
 import styles from './Promo.scss'
+import classnames from 'classnames'
+import CopyToClipboard from 'react-copy-to-clipboard'
 // import Socials from '../Socials/Socials'
 
-@CSSModules(styles)
+@CSSModules(styles, {allowMultiple: true})
 export class Promo extends React.Component {
 
   static propTypes = {
@@ -15,13 +17,32 @@ export class Promo extends React.Component {
   };
 
   state = {
-    promoActive: this.props.promoActive
+    promoActive: this.props.promoActive,
+    value: 'https://www.twinspires.com/account/register?promo_code=CAMID',
+    copied: false
   };
 
   render () {
+    let promoClass = classnames(
+      'promoItem',
+      {
+        '--active': this.state.promoActive === true
+      }
+    )
+
+    let promoClassTwo = classnames(
+      'promoItemTwo',
+      {
+        '--active': this.state.promoActive === true
+      }
+    )
+
+    console.log(this.state.value)
+
     return (
-      <div>
-        <div styleName='promo'>
+      <div styleName='promo'>
+
+        <div styleName={promoClass}>
           <div styleName='text'>
             Send Your PROMO CODE
           </div>
@@ -33,22 +54,37 @@ export class Promo extends React.Component {
             Get Your Invitation Link
           </div>
         </div>
-        <div styleName='promo-two'>
+
+        <div styleName={promoClassTwo} >
           <div styleName='text'>
             Your Invitation Link
           </div>
           <div styleName='input-container'>
-            <input styleName='input' type='text' value='https://www.twinspires.com/account/register?promo_code=CAMID' />
-            <div styleName='copy'>COPY</div>
+            <input
+                styleName='input'
+                onChange={this._onValueChange}
+                type='text'
+                value={this.state.value} />
+            <CopyToClipboard text={this.state.value}
+              onCopy={() => this.setState({copied: true})}>
+              <button styleName='copy'>COPY</button>
+            </CopyToClipboard>
           </div>
 
           <div onClick={this._onClick} styleName='link'>
             Show your Promo Code
           </div>
         </div>
+
       </div>
     )
   }
+
+  _onValueChange = (event) => {
+    this.setState({
+      value: event.target.value
+    })
+  };
 
   _onClick = (event) => {
     this.setState({promoActive: !this.state.promoActive})
