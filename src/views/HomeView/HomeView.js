@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
+import Login from '../../components/Login/Login'
 import Promo from '../../components/Promo/Promo'
 import CSSModules from 'react-css-modules'
 import styles from './HomeView.scss'
