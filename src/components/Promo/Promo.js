@@ -3,7 +3,7 @@ import CSSModules from 'react-css-modules'
 import styles from './Promo.scss'
 import classnames from 'classnames'
 import CopyToClipboard from 'react-copy-to-clipboard'
-// import Socials from '../Socials/Socials'
+import Socials from '../Socials/Socials'
 
 @CSSModules(styles, {allowMultiple: true})
 export class Promo extends React.Component {
@@ -40,42 +40,44 @@ export class Promo extends React.Component {
     )
 
     return (
-      <div styleName='promo'>
+      <div>
+        <div styleName='promo'>
 
-        <div styleName={promoClass}>
-          <div styleName='text'>
-            Send Your PROMO CODE
-          </div>
-          <div styleName='code'>
-            CAMID
+          <div styleName={promoClass}>
+            <div styleName='text'>
+              Send Your PROMO CODE
+            </div>
+            <div styleName='code'>
+              CAMID
+            </div>
+
+            <div onClick={this._onLinkClick} styleName='link'>
+              Get Your Invitation Link
+            </div>
           </div>
 
-          <div onClick={this._onLinkClick} styleName='link'>
-            Get Your Invitation Link
+          <div styleName={promoClassTwo} >
+            <div styleName='text'>
+              Your Invitation Link
+            </div>
+            <div styleName='input-container'>
+              <input
+                  styleName='input'
+                  onChange={this._onValueChange}
+                  type='text'
+                  value={this.state.value} />
+              <CopyToClipboard text={this.state.value}
+                onCopy={() => this.setState({copied: true})}>
+                <button styleName='copy'>COPY</button>
+              </CopyToClipboard>
+            </div>
+
+            <div onClick={this._onLinkClick} styleName='link'>
+              Show your Promo Code
+            </div>
           </div>
         </div>
-
-        <div styleName={promoClassTwo} >
-          <div styleName='text'>
-            Your Invitation Link
-          </div>
-          <div styleName='input-container'>
-            <input
-                styleName='input'
-                onChange={this._onValueChange}
-                type='text'
-                value={this.state.value} />
-            <CopyToClipboard text={this.state.value}
-              onCopy={() => this.setState({copied: true})}>
-              <button styleName='copy'>COPY</button>
-            </CopyToClipboard>
-          </div>
-
-          <div onClick={this._onLinkClick} styleName='link'>
-            Show your Promo Code
-          </div>
-        </div>
-
+        <Socials />
       </div>
     )
   }
