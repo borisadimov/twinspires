@@ -37,8 +37,6 @@ export class Promo extends React.Component {
       }
     )
 
-    console.log(this.state.value)
-
     return (
       <div styleName='promo'>
 
