@@ -15,7 +15,7 @@ export class HomeView extends React.Component {
         <img styleName='image' src={'./' + Image} />
         <Header />
         <Login />
-        <Promo value='https://www.twinspires.com/account/register?promo_code=CAMID'/>
+        <Promo value='CAMID'/>
       </div>
     )
   }

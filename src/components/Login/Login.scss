@@ -54,3 +54,21 @@
   color: #0068b3;
   font-weight: 400;
 }
+
+@media screen and (max-width: 480px) {
+
+  .login-container {
+    padding: 20px 15px 30px 15px;
+    max-width: 100%;
+    width: 95%;
+  }
+
+  .input {
+    max-width: 260px;
+    padding: 11px 11px;
+  }
+
+  .button {
+    padding: 10px 22px;
+  }
+}

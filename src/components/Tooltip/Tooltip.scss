@@ -1,0 +1,64 @@
+.Tooltip {
+  display: inline-block;
+  text-align: right;
+}
+
+.button {
+  color: #0068b3;
+  display: inline-block;
+  font-size: 12px;
+  border-bottom: 1px #0068b3 solid;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 21px 13px 38px;
+  max-width: 350px;
+  box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.35);
+  border-radius: 4px;
+  position: relative;
+  text-align: left;
+  color: #777;
+  z-index: 10;
+  line-height: 20px;
+}
+
+.message > b {
+  display: block;
+  padding-bottom: 2px;
+}
+
+.message:before {
+  content: '▲';
+  position: absolute;
+  font-size: 15px;
+  line-height: 15px;
+  top: -12px;
+  right: 30px;
+  z-index: -1;
+  color: #fff;
+  transform: translateX(-50%);
+  text-shadow: 0px -3px 5px rgba(0,0,0,0.35);
+}
+
+
+@media screen and (max-width: 480px) {
+  .Tooltip {
+    text-align: center;
+  }
+
+  .message:before {
+    content: '▲';
+    position: absolute;
+    font-size: 15px;
+    width: 15px;
+    line-height: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -12px;
+    z-index: -1;
+    color: #fff;
+    text-shadow: 0px -3px 5px rgba(0,0,0,0.35);
+  }
+}

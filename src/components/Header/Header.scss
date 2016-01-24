@@ -1,13 +1,28 @@
 .Header,
 .Header-bold {
-	font-size: 18px;
-	text-align: center;
+  font-size: 18px;
+  text-align: center;
+  line-height: 25px;
 }
 
 .Header {
-	padding: 25px 150px 5px 150px;
+  padding: 25px 150px 5px 150px;
 }
 
 .Header-bold {
-	font-weight: 600;
+  font-weight: 600;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .Header {
+    padding: 25px 30px 5px 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Header {
+    padding: 25px 15px 5px 15px;
+  }
 }

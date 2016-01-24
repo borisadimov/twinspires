@@ -4,6 +4,7 @@ import styles from './Promo.scss'
 import classnames from 'classnames'
 import CopyToClipboard from 'react-copy-to-clipboard'
 import Socials from '../Socials/Socials'
+import Tooltip from '../Tooltip/Tooltip'
 
 @CSSModules(styles, {allowMultiple: true})
 export class Promo extends React.Component {
@@ -15,7 +16,7 @@ export class Promo extends React.Component {
 
   static defaultProps = {
     promoActive: false,
-    value: 'https://www.twinspires.com/account/register?promo_code=CAMID'
+    value: 'CAMID'
   };
 
   state = {
@@ -39,8 +40,12 @@ export class Promo extends React.Component {
       }
     )
 
+    let url = 'https://www.twinspires.com/account/register?promo_code='
+
+    let link = url + this.state.value
+
     return (
-      <div>
+      <div styleName='promo-container'>
         <div styleName='promo'>
 
           <div styleName={promoClass}>
@@ -48,7 +53,7 @@ export class Promo extends React.Component {
               Send Your PROMO CODE
             </div>
             <div styleName='code'>
-              CAMID
+              {this.state.value}
             </div>
 
             <div onClick={this._onLinkClick} styleName='link'>
@@ -65,8 +70,8 @@ export class Promo extends React.Component {
                   styleName='input'
                   onChange={this._onValueChange}
                   type='text'
-                  value={this.state.value} />
-              <CopyToClipboard text={this.state.value}
+                  value={link} />
+              <CopyToClipboard text={link}
                 onCopy={() => this.setState({copied: true})}>
                 <button styleName='copy'>COPY</button>
               </CopyToClipboard>
@@ -78,6 +83,7 @@ export class Promo extends React.Component {
           </div>
         </div>
         <Socials />
+        <Tooltip />
       </div>
     )
   }
