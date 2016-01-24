@@ -10,12 +10,12 @@ export class Promo extends React.Component {
 
   static propTypes = {
     promoActive: PropTypes.bool,
-    value: PropTypes.string,
+    value: PropTypes.string
   };
 
   static defaultProps = {
     promoActive: false,
-    value: 'https://www.twinspires.com/account/register?promo_code=CAMID',
+    value: 'https://www.twinspires.com/account/register?promo_code=CAMID'
   };
 
   state = {
