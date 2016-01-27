@@ -15,7 +15,7 @@ export class Socials extends React.Component {
     return (
       <div styleName='Socials'>
         <div styleName='social-email'>
-          <a href={'mailto:Subject=Free%20%2410%20Bet%20at%20TwinSpires%21&Body=Use%20my%20invitation%20code%2C%20'+''+this.state.camid+'%2C%20and%20get%20%2410%20FREE%20when%20you%20place%20your%20first%20bet.%20Redeem%20it%20at%3A%20https%3A//www.twinspires.com/account/register%3Fpromo_code%3D' + ''+this.state.camid}></a>
+          <a href={'mailto:?Subject=Free%20%2410%20Bet%20at%20TwinSpires%21&Body=Use%20my%20invitation%20code%2C%20'+''+this.state.camid+'%2C%20and%20get%20%2410%20FREE%20when%20you%20place%20your%20first%20bet.%20Redeem%20it%20at%3A%20https%3A//www.twinspires.com/account/register%3Fpromo_code%3D' + ''+this.state.camid}></a>
           share via email
         </div>
         <div styleName='social-facebook'>
@@ -23,7 +23,7 @@ export class Socials extends React.Component {
           share on facebook
         </div>
         <div styleName='social-twitter'>
-          <a href={`https://twitter.com/share?url=https%3A//www.twinspires.com/account/register%3Fpromo_code%3D${this.state.camid}&text=I%20love%20@TwinSpires%21%20Sign%20up%20with%20my%20invitation%20code%20and%20get%20a%20free%20%2410%20Bet%21%20https%3A//www.twinspires.com/account/register%3Fpromo_code%3D${this.state.camid}`}></a>
+          <a href={`https://twitter.com/share?url=https%3A//www.twinspires.com/account/register%3Fpromo_code%3D${this.state.camid}&text=I%20love%20@TwinSpires%21%20Sign%20up%20with%20my%20invitation%20code%20and%20get%20a%20FREE%20%2410%20BET%21`}></a>
           share on twitter
         </div>
       </div>
