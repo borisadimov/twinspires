@@ -11,9 +11,36 @@
   width: 100%;
 }
 
+.image-tablet,
+.image-mobile {
+  width: 100%;
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   .container {
     padding: 20px 0;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .image-tablet {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image {
+    display: none;
+  }
+
+  .image-tablet {
+    display: none;
+  }
+
+  .image-mobile {
+    display: block;
   }
 }

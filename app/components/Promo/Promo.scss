@@ -12,6 +12,9 @@
 .promo-container {
   padding: 0 15px 30px 0;
   position: relative;
+  text-align: right;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .text,
@@ -85,7 +88,7 @@
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 610px) {
   .promo {
     width: 100%;
     max-width: 100%;
@@ -95,6 +98,7 @@
 
   .promo-container {
     padding: 0;
+    text-align: center;
   }
 
   .input-container {

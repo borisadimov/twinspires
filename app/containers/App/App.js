@@ -3,6 +3,7 @@ import Cookie from 'js-cookie'
 import Header from '../../components/Header/Header'
 import Login from '../../components/Login/Login'
 import Promo from '../../components/Promo/Promo'
+import Socials from '../../components/Socials/Socials'
 import CSSModules from 'react-css-modules'
 import '../../styles/core.scss'
 
@@ -42,13 +43,13 @@ export default class App extends React.Component {
     return (
       <div styleName='container'>
         <img styleName='image' src={'https://flywithmemsl.github.io/twinspires/image.jpg'} />
+        <img styleName='image-tablet' src={'https://flywithmemsl.github.io/twinspires/image-tablet.jpg'} />
+        <img styleName='image-mobile' src={'https://flywithmemsl.github.io/twinspires/image-mobile.jpg'} />
         <Header />
         {
           this.state.loggedIn ?
           <Promo /> : <Login />
         }
-
-
       </div>
     );
   }

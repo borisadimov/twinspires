@@ -1,6 +1,7 @@
 .Tooltip {
   display: inline-block;
   text-align: right;
+  margin-top: 10px;
 }
 
 .button {
@@ -8,6 +9,7 @@
   display: inline-block;
   font-size: 12px;
   border-bottom: 1px #0068b3 solid;
+  cursor: pointer;
 }
 
 .message {
@@ -43,7 +45,7 @@
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 610px) {
   .Tooltip {
     text-align: center;
   }
