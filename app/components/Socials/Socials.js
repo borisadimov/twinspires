@@ -19,7 +19,7 @@ export class Socials extends React.Component {
           share via email
         </div>
         <div styleName='social-facebook'>
-          <a href={`http://www.facebook.com/sharer/sharer.php?u=https%3A//www.twinspires.com/account/register%3Fpromo_code%3D${this.state.camid}`}></a>
+          <a target="_blank" href={`http://www.facebook.com/sharer/sharer.php?u=https%3A//www.twinspires.com/account-create-raf%3Fpromo_code%3D${this.state.camid}`}></a>
           share on facebook
         </div>
         <div styleName='social-twitter'>
